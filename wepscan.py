@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-#   wepsan.py
+#   wepscan.py
 #   ~~~~~~~~~
 #   Scan wifi networks, and get the default key for Huawei AP's.
 #  
@@ -226,8 +226,6 @@ if __name__ == "__main__":
                         help="Mac address to wep key (formerly mac2wep).")
     parser.add_argument("-i", "--interface", dest="interface",
                         help="WiFi interface to perform scanning.")
-    parser.add_argument("-o", "--output", dest="log_file",
-                        help="File to save found keys.")
 
     arguments = parser.parse_args()
     main(arguments)      
