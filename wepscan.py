@@ -177,11 +177,11 @@ def main(arguments):
     iface = arguments.interface
 
     # If -m argument given, just perform mac2wep()
-    if arguments.macaddr:
-        macaddr = str(arguments.macaddr).upper().replace(':', '')
+    if arguments.macaddress:
+        macaddr = str(arguments.macaddress).upper().replace(':', '')
         if check_huaweinic(macaddr):
             m2w = mac2wep(macaddr)
-            print "[+] SUFFIX: %s, DEFAULT WEP KEY: %s" % (m2w["Suffix"], m2w["Key"])
+            print "[+] SUFFIX: %s, DEFAULT WEP KEY: %s\n" % (m2w["Suffix"], m2w["Key"])
         else:
             print "[-] This MAC Address seems to be not vulnerable!"
 
@@ -222,7 +222,7 @@ if __name__ == "__main__":
         sys.argv.append('--help')
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("-m", "--mac-address", dest="macaddr",
+    parser.add_argument("-m", "--mac-address", dest="macaddress",
                         help="Mac address to wep key (formerly mac2wep).")
     parser.add_argument("-i", "--interface", dest="interface",
                         help="WiFi interface to perform scanning.")
