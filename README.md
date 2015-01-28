@@ -1,10 +1,10 @@
-# wepscan
+# wepscan.py
 Scan WiFi networks and show up default WEP keys for vulnerable Huawei access points.
 
-Usage:
+## Usage:
 ~~~~~~
 
-View arguments:
+## View arguments:
 
 $ ./wepscan.py -h
 usage: wepscan.py [-h] [-m MACADDRESS] [-i INTERFACE]
@@ -17,13 +17,13 @@ optional arguments:
                         WiFi interface to perform scanning.
 
 
-Convert single MAC address to WEP key:
+## Get the default WEP key for a single MAC address:
 
 $ ./wepscan.py -m 5C:4C:A9:30:FF:4C 
 [+] SUFFIX: c5eb, DEFAULT WEP KEY: 6434386463
 
 
-Scan WiFi networks with normal user priviledges:
+## Scan WiFi networks with normal user priviledges:
 
 $ ./wepscan.py -i wlan0
  + -- + ------------------ + ------------------ + ------ + ------ + ------------ +
@@ -33,7 +33,7 @@ $ ./wepscan.py -i wlan0
  + -- + ------------------ + ------------------ + ------ + ------ + ------------ +
 
 
-Scan WiFi networks with sudo or root priviledges:
+## Scan WiFi networks with sudo or root priviledges:
 
 $ sudo ./wepscan.py -i wlan0
 [...]
