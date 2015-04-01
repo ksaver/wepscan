@@ -3,11 +3,10 @@
 [![Join the chat at https://gitter.im/ksaver/wepscan](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ksaver/wepscan?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Scan WiFi networks and show up default WEP keys for vulnerable Huawei access points.
 
-## Usage:
-~~~~~~~~~
+##Usage:
 
-* View arguments:
-
+###View arguments:
+```bash
 $ ./wepscan.py -h
 usage: wepscan.py [-h] [-m MACADDRESS] [-i INTERFACE]
 
@@ -17,26 +16,26 @@ optional arguments:
                         Mac address to wep key (formerly mac2wep).
   -i INTERFACE, --interface INTERFACE
                         WiFi interface to perform scanning.
+```
 
-
-* Get the default WEP key for a single MAC address:
-
+###Get the default WEP key for a single MAC address:
+```bash
 $ ./wepscan.py -m 5C:4C:A9:30:FF:4C 
 [+] SUFFIX: c5eb, DEFAULT WEP KEY: 6434386463
+```
 
-
-* Scan WiFi networks with normal user priviledges:
-
+###Scan WiFi networks with normal user priviledges:
+```bash
 $ ./wepscan.py -i wlan0
  + -- + ------------------ + ------------------ + ------ + ------ + ------------ +
  |    | NETWORK            | ADDRESS            | SIGNAL | SUFFIX | DEFAULT KEY  |
  + -- + ------------------ + ------------------ + ------ + ------ + ------------ +
  |  1 | SKYNET             | 00:11:22:33:AA:FF  | 24/70  |        |              |
  + -- + ------------------ + ------------------ + ------ + ------ + ------------ +
+```
 
-
-* Scan WiFi networks with sudo or root priviledges:
-
+###Scan WiFi networks with sudo or root priviledges:
+```bash
 $ sudo ./wepscan.py -i wlan0
 [...]
  + --- + ------------------ + ------------------ + -------- + ------ + ------------ +
@@ -54,3 +53,4 @@ $ sudo ./wepscan.py -i wlan0
  |  10 | INFINITUME75B0E    | A4:B1:E9:E7:5B:0E  | 19/70    |        |              |
  |  11 | ARRIS-BC72         | CC:A4:62:A3:BC:70  | 25/70    |        |              |
 [...]
+```
