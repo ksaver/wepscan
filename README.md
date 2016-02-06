@@ -54,3 +54,4 @@ $ sudo ./wepscan.py -i wlan0
  |  11 | ARRIS-BC72         | CC:A4:62:A3:BC:70  | 25/70    |        |              |
 [...]
 ```
+![wepscan]( wepscan/wepscan-01.png "wepscan screenshot")
